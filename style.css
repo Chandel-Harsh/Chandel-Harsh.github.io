@@ -40,6 +40,16 @@ nav a:hover {
   box-shadow: 0 0 10px rgba(0,0,0,0.1);
 }
 
+a {
+  color: #333;             /* Dark gray for normal state */
+  text-decoration: none;   /* Removes underline */
+}
+
+a:hover {
+  color: #ff9800;          /* Orange when hovered */
+  text-decoration: underline;
+}
+
 /* Headings */
 h1, h2 {
   color: #333;
