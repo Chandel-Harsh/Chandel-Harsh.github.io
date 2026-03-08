@@ -46,19 +46,6 @@ h1, h2 {
   margin-bottom: 15px;
 }
 
-/* Blog post styling */
-.blog-post {
-  margin-bottom: 30px;
-}
-
-.blog-post h2 {
-  color: #444;
-}
-
-.blog-post p {
-  margin-bottom: 10px;
-}
-
 /* Footer */
 footer {
   text-align: center;
