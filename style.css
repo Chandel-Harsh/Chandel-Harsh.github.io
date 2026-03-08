@@ -1,0 +1,69 @@
+/* Reset some default browser styles */
+body, h1, h2, h3, p, ul {
+  margin: 0;
+  padding: 0;
+}
+
+/* General body styling */
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background-color: #f9f9f9;
+  color: #333;
+  padding: 20px;
+}
+
+/* Navigation bar */
+nav {
+  background: #333;
+  padding: 10px;
+  text-align: center;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  margin: 0 15px;
+  font-weight: bold;
+}
+
+nav a:hover {
+  color: #ff9800;
+}
+
+/* Page container */
+.container {
+  max-width: 800px;
+  margin: 20px auto;
+  background: #fff;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+/* Headings */
+h1, h2 {
+  color: #333;
+  margin-bottom: 15px;
+}
+
+/* Blog post styling */
+.blog-post {
+  margin-bottom: 30px;
+}
+
+.blog-post h2 {
+  color: #444;
+}
+
+.blog-post p {
+  margin-bottom: 10px;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  margin-top: 40px;
+  padding: 10px;
+  background: #333;
+  color: #fff;
+}
