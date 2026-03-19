@@ -40,9 +40,21 @@ nav a:hover {
   box-shadow: 0 0 10px rgba(0,0,0,0.1);
 }
 
+.code-container {
+  background-color: #ffffff;   /* White background */
+  color: #333;                 /* Same dark gray text as links */
+  font-family: "Courier New", monospace; /* Monospace font for code */
+  font-size: 14px;             /* Slightly smaller text */
+  padding: 15px;               /* Space around code */
+  border: 1px solid #ccc;      /* Light border */
+  border-radius: 5px;          /* Rounded corners */
+  margin: 20px 0;              /* Space above and below */
+  overflow-x: auto;            /* Scroll if code is too wide */
+}
+
 a {
   color: #333;             /* Dark gray for normal state */
-  text-decoration: none;   /* Removes underline */
+  text-decoration: underline;
 }
 
 a:hover {
