@@ -16,6 +16,55 @@
     <h1>C++</h1>
     <h2>Introduction</h2>
     <p>C++ is a powerful, general-purpose programming language widely used in systems programming and performance-critical applications. While its syntax can be more complex than languages like Python and may feel challenging for beginners, mastering C++ provides fine-grained control over memory, performance, and hardware-level operations. This control makes it a preferred choice for building operating systems, compilers, and large-scale applications. Notably, open-source projects such as the LLVM compiler infrastructure and many other industry-standard tools are built using C++.</p>
+    <h2>Identifiers</h2>
+    <p>In C/C++, the names of variables, functions, labels and other user defined objects are called identifiers.</p>
+    <ul>
+      <li>Identifiers must start with a letter or an underscore</li>
+      <li>Subsequent characters can be number, letter or underscores</li>
+      <li>Identifiers are case-sensitive</li>
+    </ul>
+    <p>There is also a concept of significant characters in an identifier. 
+       In C, for external linkage usage, at least first six characters and for 
+       internal name, at least first 31 characters are significant in an ident-
+       ifier.In C++, at least the first 1024 character are significant.</p>
+    <h2>Namespaces</h2>
+    <p>They were introduced to localize the names of identifiers in order to 
+       avoid name collisions. namespace keyword is used to declare  a namespace.</p>
+    <div class="code-container">
+      <p>namespace name {<br>
+         &nbsp;&nbsp;// declarations local to this namespace<br> 
+         }</p>
+    </div>
+    <ul>
+      <li>A namespace defines a scope by partitioning the global namespace which is
+          unique and limited to the translation unit</li>
+      <li>Scope resolution operator must be used to access the objects defined within 
+          a namespace e.g. <b>namespaceName::objectName</b></li>
+      <li><b>using</b> keyword can be used to bring the objects declared in a namespace to the
+          current scope starting from the line containing the using statement till end of
+          current scope</li> 
+    </ul>
+    <div class="code-container">
+      <p>
+       using namespace name; // brings all the members of this namespace to the current scope<br>
+       using name::member; // brings this particular member to the current scope. 
+      </p>
+    </div>
+    <ul>
+      <li>There may be namespace declarations of same name allowing namespaces to be
+          split over several files or even within the same file</li>
+      <li>A namespace must be declared outside of all other scopes i.e. in global
+          namespace. However, a namespace can be nested in another namespace and one has 
+          to qualify the object with all the namespaces that it is contained in using 
+          scope resolution operator</li>
+      <li>Standard C++ defines its entire library in its own namespace std</li>
+      <li>If one has large number of references to the members of a namespace then one
+          should bring that namespace to relevant scope. Otherwise, if only certain members
+          are used heavily, then <b>using</b> keyword should be used to bring those individual 
+          members into relevant scope</li>
+      <li>Old .h header files put their contents into the global namespace and new style 
+          headers put their contents into std namespace</li>
+    </ul>
   </div>
 
   <footer>
