@@ -65,6 +65,34 @@
       <li>Old .h header files put their contents into the global namespace and new style 
           headers put their contents into <b>std</b> namespace</li>
     </ul>
+    <h2>RAII</h2>
+    <p><b>RAII</b> stands for <b>Resource acquisition is initialization</b>. In RAII, holding a
+    resource is class invariant, and is tied to object lifetime. Resource is allocated during
+    object creation by constructor and resource deallocation is done during object destruction by
+    destructor. It ensures if there is no object leak, then there is also no resource leak.</p>
+    <div class="code-container">
+      <p>class FileHandler {<br>
+         &nbsp;&nbsp;File* fp;<br>
+         public:
+	 &nbsp;&nbsp;FileHandler(string filename) {<br>
+	 &nbsp;&nbsp;&nbsp;&nbsp;fp = fopen(filename, "w");<br>
+         &nbsp;&nbsp;&nbsp;&nbsp;if(!fp) throw std::runtime_error("Failed to open file");<br>
+         &nbsp;&nbsp;}<br>
+         <br>
+	 &nbsp;&nbsp;~FileHandler() {<br>
+	 &nbsp;&nbsp;&nbsp;&nbsp;if(fp) fclose(fp);<br>
+	 &nbsp;&nbsp;}<br>
+	 &nbsp;&nbsp;FILE* get() const { return fp; }<br>
+         };<br>
+	 //Above class exhibits RAII principle. Constructor acquires the file and when the object goes
+	 out of scope, destructor releases the file. C++ file streams exhibit RAII.
+      </p>
+    </div>
+    <ul>
+      <li> RAII only works for resources handled by stack-allocated objects, where there is well defined
+	   static lifetime.</li>
+      <li> For RAII to work on heap managed objects, <b> smart pointers</b> should be used.</li>
+    </ul>
   </div>
 
   <footer>
