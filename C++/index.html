@@ -73,7 +73,7 @@
     <div class="code-container">
       <p>class FileHandler {<br>
          &nbsp;&nbsp;File* fp;<br>
-         public:
+	 public:<br>
 	 &nbsp;&nbsp;FileHandler(string filename) {<br>
 	 &nbsp;&nbsp;&nbsp;&nbsp;fp = fopen(filename, "w");<br>
          &nbsp;&nbsp;&nbsp;&nbsp;if(!fp) throw std::runtime_error("Failed to open file");<br>
